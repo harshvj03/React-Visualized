@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React in Browser</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script>
+</head>
+
+<body>
+    <div></div>
+    <button onclick="render()">render</button>
+
+    <script type="text/babel">
+        function render() {
+            const root = ReactDOM.createRoot(document.querySelector('div'));
+            const name = 'Harsh'
+
+            const h1 = <div>
+                <h1>Welcome to JSX</h1>
+                <p>This is all done by babel</p>
+                <h6>{name}</h6>
+            </div>
+            root.render(h1)
+        }
+
+    </script>
+</body>
+
+</html>
